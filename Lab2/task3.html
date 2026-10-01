@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1b1b1b;
+    }
+
+    .container {
+      width: 1100px;
+      max-width: 92%;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #dfe7f3;
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2a2a2a;
+    }
+
+    .btn {
+      background: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 60px 0 30px;
+    }
+
+    .hero-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 54px;
+      margin: 0 0 15px;
+      line-height: 1.1;
+    }
+
+    .hero-text h1 span {
+      color: #1e3a8a;
+    }
+
+    .hero-text p {
+      margin: 0 0 22px;
+      color: #555;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .primary, .secondary {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .primary {
+      background: #1e3a8a;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #1e3a8a;
+      border: 1px solid #1e3a8a;
+    }
+
+    .profile-card {
+      flex: 0.8;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      border-radius: 22px;
+      padding: 30px;
+      color: white;
+      box-shadow: 0 12px 25px rgba(30, 58, 138, 0.25);
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .profile-card h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .profile-card p {
+      margin: 0;
+      line-height: 1.7;
+      color: #dfe7ff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin: 20px 0 10px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      padding: 20px 0 60px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dfe7f3;
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8edff;
+      color: #1e3a8a;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+
+    .card p,
+    .card li {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 18px 0 40px;
+      color: #666;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner,
+      .three-col {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">John Doe</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Hello, I am <span>Abdullah Abdullah</span></h1>
+          <p>
+            I am a student at Air University, and I build clean, user-friendly, and responsive websites using HTML and CSS.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="primary">View Projects</a>
+            <a href="#contact" class="secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar">AA</div>
+          <h3>Student</h3>
+          <p>Air University student focused on simple, elegant, and professional web design.</p>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Portfolio</h2>
+
+    <section class="three-col">
+      <article class="card" id="about">
+        <div class="badge">About</div>
+        <h3>About Me</h3>
+        <p>
+          I am Abdullah Abdullah, a student at Air University. I enjoy creating attractive and functional web pages using HTML, CSS, and front-end design principles.
+        </p>
+      </article>
+
+      <article class="card" id="skills">
+        <div class="badge">Skills</div>
+        <h3>My Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Responsive Design</li>
+          <li>Web Layouts</li>
+        </ul>
+      </article>
+
+      <article class="card" id="projects">
+        <div class="badge">Projects</div>
+        <h3>My Work</h3>
+        <p>
+          I have built portfolio pages, landing pages, and task-based interfaces using clean HTML and CSS layouts for university assignments and practice work.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    © 2026 Abdullah Abdullah | Air University
+  </footer>
+</body>
+</html>
